@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME BAKER APPLICATION</title>
+</head>
+<body>
+{{if .First}}
+<p> You are logged in as {{.Username}}<br></p>
+{{end}}
+{{$user:=.Username}}
+<h2><a href="/logout">Log Out</a></h2>
+<h1>Welcome to Home Baker Beta</h1>
+
+<h2><a href="/display">Display Sales Items</a></h2>
+<h2><a href="/search">Search for items</a></h2>
+<h2><a href="/createOrder">Create a new order</a></h2>
+<h2><a href="/viewOrEdit">View or edit order</a></h2>
+{{if eq $user "admin"}}
+<h2><a href="/deleteOrder">View all or delete orders (admin feature)</a></h2>
+<h2><a href="/overview">Weekly order overview (admin feature)</a></h2>
+{{end}}
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Daily Order</title>
+</head>
+<body>
+
+<h1>View by day</h1>
+
+ <form method="post">
+    <p>Please select your which days to view order</p>
+    <div>
+        <input type="radio" id = "Monday" name="day" value="1">
+        <label for="Monday">Monday</label><br>
+        <input type="radio" id = "Tuesday" name="day" value="2">
+        <label for="Tuesday">Tuesday</label><br>
+        <input type="radio" id = "Wednesday" name="day" value="3">
+        <label for="Wednesday">Wednesday</label><br>
+        <input type="radio" id = "Thursday" name="day" value="4">
+        <label for="Thursday">Thursday</label><br>
+        <input type="radio" id = "Friday" name="day" value="5">
+        <label for="Friday">Friday</label><br>
+        <input type="radio" id = "Saturday" name="day" value="6">
+        <label for="Saturday">Saturday</label><br>
+        <input type="radio" id = "Sunday" name="day" value="7">
+        <label for="Sunday">Sunday</label><br>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+
+<ol>
+    {{range .}}
+    <li> Order Number : {{.OrderNum}} Name: {{.Name}} , Address: {{.Address}} , Delivery Day: {{.DeliveryDay}}, Shopping Cart: {{.ShoppingCart}}, Amount: {{.Amount}} </li>
+    {{end}}
+ </ol>
+
+
+</body>
+</html>

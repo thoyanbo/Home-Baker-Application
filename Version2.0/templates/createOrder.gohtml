@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Order</title>
+</head>
+<body>
+<h1>Create New Order</h1>
+
+<h2>Enter the following to create new order</h2>
+
+<form method="post">
+    <label for ="name">Name:</label>
+    <input type="text" name="name" placeholder="name"><br>
+    <label for ="address">Address:</label>
+    <input type="text" name="address" placeholder="address"><br>
+    <label for ="dday">Delivery Day (Enter int, eg. 1 for Monday, 2 for Tuesday) :</label>
+    <input type="number" name="dday" min = "1" max = "7"><br>
+    <h3>Enter the following to create your shopping cart</h3> 
+    {{range .}}
+                {{$name:=.Item}}
+                {{$max:=.Quantity}}
+                <label for ="{{$name}}">Item: {{$name}}, Order Quantity:</label>
+                <input type="number" name="{{$name}}" value = "0" min = "0" max = "{{$max}}"><br>
+    {{end}}  
+    
+    <input type="submit">
+    <input type="reset">
+</form>
+
+<h2><a href="/menu">Return to menu</a></h2>
+</body>
+</html>

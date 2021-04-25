@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View by Category</title>
+</head>
+<body>
+<h2><a href="/logout">Log Out</a></h2>
+
+<h1>View by Category</h1>
+
+ <form method="post">
+    <p>Please select your preferred category for search:</p>
+    <div>
+        <input type="radio" id = "bread" name="category" value="Bread">
+        <label for="bread">Bread</label><br>
+        <input type="radio" id = "snacks" name="category" value="Snacks">
+        <label for="snacks">Snacks</label><br>
+        <input type="radio" id = "pastries" name="category" value="Pastries">
+        <label for="pastries">Pastries</label><br>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+<ol>
+    {{range .}}
+    <li> Item Name: {{.Name}} , Unit Price {{.UnitPrice}} </li>
+    {{end}}
+ </ol>
+
+<h2><a href="/menu">Return to menu</a></h2>
+
+
+</body>
+</html>

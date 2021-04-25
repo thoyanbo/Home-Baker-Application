@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Items By Price</title>
+</head>
+<body>
+<h1>Our sales items</h1>
+<ol>
+    <h2>Sales Items sorted by increasing price</h2>
+    {{range .}}
+    <li> Unit Price {{.UnitPrice}} , Item Name: {{.Name}} , Category {{.Category}} </li>
+    {{end}}
+</ol>
+<h2><a href="/menu">Return to menu</a></h2>
+
+</body>
+</html>

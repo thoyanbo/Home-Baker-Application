@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+<h1>The following search functions are available</h1>
+
+<h2>Search for an existing item</h2>
+ <h3>Enter the following to start searching. Please note that the search is case sensitive.</h3>
+
+    <form method="post">
+    <label for ="name">Item Name:</label>
+        <input type="text" name="name" placeholder="name"><br>
+        <input type="submit">
+    </form>
+<h2><a href="/viewPrice">View by price</a></h2>
+<h2><a href="/viewCategory">View by category</a></h2>
+<h2><a href="/recommended">View recommended</a></h2>
+<h2><a href="/menu">Return to menu</a></h2>
+    
+{{if .Name}}
+<h2> Item Found! <br></h2>
+<h2> Item Name: {{.Name}} - Price: {{.UnitPrice}} - Category: {{.Category}} <br></h2>
+{{end}}
+
+</body>
+</html>

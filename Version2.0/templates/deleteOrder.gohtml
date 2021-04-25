@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete order (ADMIN ONLY)</title>
+</head>
+<body>
+<h1>Delete existing order</h1>
+
+<h2>Enter the following to delete an existing order</h2>
+
+<form method="post">
+    <h3>Enter the the order number to delete</h3> 
+                <label for ="bookingNumber"> Booking Number: </label>
+                <input type="number" name="bookingNumber" value = "0" min = "0" ><br>
+    
+    <input type="submit">
+    <input type="reset">
+</form>
+
+<h2><a href="/menu">Return to menu</a></h2>
+
+{{if .OrderNum}}
+<h3> The following item has been deleted.. <br></h3>
+<h3> Order Number : {{.OrderNum}} | Name : {{.Name}} | Address : {{.Address}} | Delivery Day {{.DeliveryDay}} | Shopping Cart : {{.ShoppingCart}} | Order Amount : ${{.Amount}} <br></h3>
+{{end}}
+
+</body>
+</html>

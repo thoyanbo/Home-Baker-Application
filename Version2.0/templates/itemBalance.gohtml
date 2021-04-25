@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Balance</title>
+</head>
+<body>
+<h3>These are our available items and balance</h3>
+{{range .}}
+<p> Item: {{.Item}}, Remaining Balance: {{.Quantity}} </p>
+ {{end}}
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DISPLAY SALES ITEMS</title>
+</head>
+<body>
+<h1>These are our items for sale</h1>
+<ol>
+    {{range .}}
+    <li> Name : {{.Name}}, Price : {{.UnitPrice}} , Category: {{.Category}} </li>
+    {{end}}
+</ol>
+
+<h2><a href="/menu">Return to menu</a></h2>
+
+</body>
+</html>

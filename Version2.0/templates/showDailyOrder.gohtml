@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Balance</title>
+</head>
+<body>
+<h3>This is the weekly order summary</h3>
+{{range .}}
+<p> There are a total of {{.DailyOrder}} orders for {{.Day}} </p>
+ {{end}}
+
+</body>
+</html>

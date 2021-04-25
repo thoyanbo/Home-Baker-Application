@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Items</title>
+</head>
+<body>
+<h1>Our recommended items</h1>
+<ol>
+    {{range .}}
+    <li> Unit Price {{.UnitPrice}} , Item Name: {{.Name}}  </li>
+    {{end}}
+</ol>
+
+<h2><a href="/menu">Return to menu</a></h2>
+
+</body>
+</html>

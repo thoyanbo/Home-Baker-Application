@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View bookings</title>
+</head>
+<body>
+<h1>Here are your order details:</h1>
+    {{range .}}
+    <ol>
+    <li> Order Number : {{.OrderNum}} Name: {{.Name}} , Address: {{.Address}} , Delivery Day: {{.DeliveryDay}}, Shopping Cart: {{.ShoppingCart}}, Amount: {{.Amount}} </li>
+    </ol>
+    {{end}}
+
+</body>
+</html>

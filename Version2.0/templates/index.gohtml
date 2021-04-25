@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME BAKER APPLICATION</title>
+</head>
+<body>
+<h1>Welcome to Home Baker Beta</h1>
+{{if .First}}
+Welcome User : {{.Username}}<br>
+<h2><a href="/menu">Menu</a></h2>
+<h2><a href="/logout">Log Out</a></h2>
+{{else}}
+<h2>You are currently either not logged in or need to sign up for an account</h2>
+<h2><a href="/signup">Sign Up</a></h2>
+<h2><a href="/login">Log in</a></h2>
+{{end}}
+
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Available Days</title>
+</head>
+<body>
+<h3>These are our available booking days</h3>
+    {{range .}}
+    <li> {{.Day}} is available for booking , {{.RemainingOrd}} orders still available for taking </li>
+    {{end}}
+</body>
+</html>
