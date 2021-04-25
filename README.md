@@ -1,4 +1,4 @@
-# GoSchool-Project-2---Home-Baker-Application
+# Home-Baker-Application
 2nd Project creating using Go.
 
 Home Baker is an application to manage the orders of a home based bakery for the upcoming week.
